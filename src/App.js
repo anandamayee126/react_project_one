@@ -1,4 +1,5 @@
-import ExpenseItem from "./components/ExpenseItem";
+// import ExpenseItem from "./components/ExpenseItem";
+import Expense from "./components/Expense";
 function App() {
   let expenses=[
     {id:1,date:new Date(2023,7,12),location:"Bangalore",title:"pen",price:"$1"},
@@ -9,19 +10,7 @@ function App() {
   return (
       <div>
         <h1>Let's get Started</h1>
-        {
-          expenses.map((exp,ind)=>{
-            <ExpenseItem
-            key={exp.id}
-            date={exp.date}
-            location={exp.location}
-            title={exp.title}
-            price={exp.price}
-          ></ExpenseItem>
-          })
-          
-        }
-        
+        <Expense expenses={expenses}></Expense>
       </div>
     );
 }
