@@ -2,6 +2,9 @@ import "./ExpenseItem.css";
 import ExpenseDate from './ExpenseDate.js';
 import Card from "./Card.js";
 function ExpenseItem(props) {
+  function eventhandlerfunc(e){
+    console.log("Button Clicked");
+  }
 
   return (
     <Card className="expense-item">
@@ -11,6 +14,7 @@ function ExpenseItem(props) {
         <h2 className="expense-item h2">{props.title}</h2>
         <div className="expense-item__price">{props.price}</div>
       </div>
+      <button onClick={eventhandlerfunc}>Button clicked</button>
     </Card>
   );
 }
